@@ -4,189 +4,86 @@
   <title>On The Menu Lately</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #ffffff;
-      color: #111;
-    }
+    body { margin:0; font-family:'Inter'; }
 
     nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      border-bottom: 1px solid #eee;
+      display:flex; justify-content:space-between;
+      padding:20px 40px; border-bottom:1px solid #eee;
     }
 
-    nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: black;
-      font-size: 14px;
-      letter-spacing: 1px;
+    nav a { margin-left:20px; text-decoration:none; color:black; }
+
+    header { text-align:center; padding:60px 20px; }
+
+    h1 { font-family:'Playfair Display'; font-size:48px; }
+
+    .featured {
+      max-width:900px; margin:auto; padding:40px;
     }
 
-    header {
-      text-align: center;
-      padding: 60px 20px;
-    }
-
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 56px;
-      letter-spacing: 2px;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      color: #666;
-      font-size: 16px;
-    }
-
-    .hero img {
-      width: 100%;
-      height: 400px;
-      object-fit: cover;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-      padding: 40px;
-      max-width: 900px;
-      margin: auto;
+    .featured h2 {
+      font-family:'Playfair Display';
+      margin-bottom:20px;
     }
 
     .card {
-      text-align: center;
+      margin-bottom:30px;
     }
 
     .card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 8px;
+      width:100%; height:250px; object-fit:cover;
+      border-radius:8px;
     }
 
     .card h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 20px;
-      margin-top: 10px;
+      font-family:'Playfair Display';
     }
 
-    footer {
-      text-align: center;
-      padding: 40px;
-      font-size: 13px;
-      color: #aaa;
+    @media(max-width:768px){
+      h1 { font-size:32px; }
     }
-
-    /* 🔥 MOBILE */
-    @media (max-width: 768px) {
-
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
-      }
-
-      nav div:last-child {
-        margin-top: 10px;
-      }
-
-      nav a {
-        margin-left: 0;
-        margin-right: 15px;
-      }
-
-      header h1 {
-        font-size: 36px;
-      }
-
-      .hero img {
-        height: 250px;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-        padding: 20px;
-        gap: 20px;
-      }
-
-    }
-
   </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
-  <div style="font-family:'Playfair Display', serif; font-size:22px;">
-    On The Menu Lately
-  </div>
-
+  <div>On The Menu Lately</div>
   <div>
-    <a href="index.html">HOME</a>
-    <a href="blog.html">BLOGS</a>
-    <a href="tried.html">TRIED & TESTED</a>
-    <a href="about.html">ABOUT</a>
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blogs</a>
+    <a href="tried.html">Tried & Tested</a>
+    <a href="about.html">About</a>
   </div>
 </nav>
 
-<!-- HEADER -->
 <header>
-  <h1>On The Menu<br>Lately</h1>
+  <h1>On The Menu Lately</h1>
   <p>what’s actually worth eating right now</p>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <img src="https://source.unsplash.com/1200x400/?restaurant" />
-</section>
+<section class="featured">
 
-<!-- CARDS -->
-<section class="grid">
+  <h2>Featured</h2>
 
-  <a href="index.html" style="text-decoration:none; color:inherit;">
+  <a href="blog1.html">
     <div class="card">
-      <img src="https://source.unsplash.com/400x300/?food" />
-      <h3>Home</h3>
+      <img src="https://source.unsplash.com/800x400/?sushi">
+      <h3>Is Pop Sushi Actually Worth It?</h3>
     </div>
   </a>
 
-  <a href="blog.html" style="text-decoration:none; color:inherit;">
+  <a href="blog2.html">
     <div class="card">
-      <img src="https://source.unsplash.com/400x300/?dessert" />
-      <h3>Blogs</h3>
-    </div>
-  </a>
-
-  <a href="tried.html" style="text-decoration:none; color:inherit;">
-    <div class="card">
-      <img src="https://source.unsplash.com/400x300/?restaurant" />
-      <h3>Tried & Tested</h3>
-    </div>
-  </a>
-
-  <a href="about.html" style="text-decoration:none; color:inherit;">
-    <div class="card">
-      <img src="https://source.unsplash.com/400x300/?cafe" />
-      <h3>About</h3>
+      <img src="https://source.unsplash.com/800x400/?dessert">
+      <h3>What Everyone’s Eating This Week</h3>
     </div>
   </a>
 
 </section>
-
-<footer>
-  © 2026 On The Menu Lately
-</footer>
 
 </body>
 </html>
