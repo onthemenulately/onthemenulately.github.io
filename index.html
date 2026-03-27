@@ -7,26 +7,34 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
 
   <style>
-    body { margin:0; font-family:'Inter'; }
+    body { margin:0; font-family:'Inter', sans-serif; }
 
     nav {
       display:flex; justify-content:space-between;
       padding:20px 40px; border-bottom:1px solid #eee;
     }
 
-    nav a { margin-left:20px; text-decoration:none; color:black; }
-
-    header { text-align:center; padding:60px 20px; }
-
-    h1 { font-family:'Playfair Display'; font-size:48px; }
-
-    .featured {
-      max-width:900px; margin:auto; padding:40px;
+    nav a {
+      margin-left:20px;
+      text-decoration:none;
+      color:black;
+      font-size:14px;
     }
 
-    .featured h2 {
+    header {
+      text-align:center;
+      padding:60px 20px;
+    }
+
+    h1 {
       font-family:'Playfair Display';
-      margin-bottom:20px;
+      font-size:48px;
+    }
+
+    .featured {
+      max-width:900px;
+      margin:auto;
+      padding:40px;
     }
 
     .card {
@@ -34,7 +42,9 @@
     }
 
     .card img {
-      width:100%; height:250px; object-fit:cover;
+      width:100%;
+      height:250px;
+      object-fit:cover;
       border-radius:8px;
     }
 
@@ -43,7 +53,14 @@
     }
 
     @media(max-width:768px){
+      nav {
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
       h1 { font-size:32px; }
+
+      .featured { padding:20px; }
     }
   </style>
 </head>
@@ -51,10 +68,13 @@
 <body>
 
 <nav>
-  <div>On The Menu Lately</div>
+  <div style="font-family:'Playfair Display'; font-size:22px;">
+    On The Menu Lately
+  </div>
+
   <div>
     <a href="index.html">Home</a>
-    <a href="blog.html">Blogs</a>
+    <a href="blogs.html">Blogs</a>
     <a href="tried.html">Tried & Tested</a>
     <a href="about.html">About</a>
   </div>
@@ -67,7 +87,7 @@
 
 <section class="featured">
 
-  <h2>Featured</h2>
+  <h2 style="font-family:'Playfair Display';">Featured</h2>
 
   <a href="blog1.html">
     <div class="card">
