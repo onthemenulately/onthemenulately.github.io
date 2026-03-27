@@ -56,9 +56,15 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 30px;
       padding: 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .card {
+      text-align: center;
     }
 
     .card img {
@@ -81,7 +87,7 @@
       color: #aaa;
     }
 
-    /* 🔥 MOBILE OPTIMIZATION */
+    /* 🔥 MOBILE */
     @media (max-width: 768px) {
 
       nav {
@@ -108,6 +114,7 @@
       }
 
       .grid {
+        grid-template-columns: 1fr;
         padding: 20px;
         gap: 20px;
       }
@@ -139,7 +146,7 @@
   <p>what’s actually worth eating right now</p>
 </header>
 
-<!-- HERO IMAGE -->
+<!-- HERO -->
 <section class="hero">
   <img src="https://source.unsplash.com/1200x400/?restaurant" />
 </section>
@@ -147,9 +154,16 @@
 <!-- CARDS -->
 <section class="grid">
 
-  <a href="blog.html" style="text-decoration:none; color:inherit;">
+  <a href="index.html" style="text-decoration:none; color:inherit;">
     <div class="card">
       <img src="https://source.unsplash.com/400x300/?food" />
+      <h3>Home</h3>
+    </div>
+  </a>
+
+  <a href="blog.html" style="text-decoration:none; color:inherit;">
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?dessert" />
       <h3>Blogs</h3>
     </div>
   </a>
